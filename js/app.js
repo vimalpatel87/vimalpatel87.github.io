@@ -24,7 +24,7 @@ libraryApp.controller('libraryController', function($scope){
         if(key == "") {
             $scope.booksResults = [];   
             $("#loading-image").hide();
-            $scope.$apply();
+            //$scope.$apply();
          } else {
             var request = api_prefix + key;
             $.get(request, function(resp) {
