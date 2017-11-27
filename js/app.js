@@ -24,22 +24,24 @@ libraryApp.controller('libraryController', function($scope){
         if(key == "") {
             $scope.booksResults = [];   
             $scope.$apply();
-         }
-        var request = api_prefix + key;
-        $.get(request, function(resp) {
-            if(resp.items && resp.items.length > 0) {
-                $scope.booksResults = resp.items;
-                $scope.$apply();
+         } else {
+            var request = api_prefix + key;
+            $.get(request, function(resp) {
+                if(resp.items && resp.items.length > 0) {
+                    $scope.booksResults = resp.items;
+                    $scope.$apply();
+                    $("#loading-image").hide();
+                }
+                else {
+                    alert('Sorry, No Book Found!');
+                    $("#loading-image").hide();
+                }  
+            })
+            .error(function(e){
+                console.log(e);
                 $("#loading-image").hide();
+            });
             }
-            else {
-                alert('Sorry, No Book Found!');
-                $("#loading-image").hide();
-            }  
-        })
-        .error(function(e){
-            console.log(e);
-            $("#loading-image").hide();
-        });
+        
   }
 });
