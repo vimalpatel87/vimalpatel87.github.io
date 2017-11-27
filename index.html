@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="libraryApp" ng-controller="libraryController">
+<head>
+      <!-- Basic Page Needs -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- Mobile Specific Metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <title>My Library</title>
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!--Style CSS-->
+      <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="lib/angular/angular.min.js" ></script>
+    <script type="text/javascript" src="js/app.js" ></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+</head>
+<body>
+    
+<article class="main" >
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-10 col-sm-offset-1">
+             <!-- Left Section -->
+            <div class="col-md-4">
+               <div class="left_side">
+                  <div class="search-btn">
+                     <!-- Book Search Form -->
+                  	 <form method="post" action="">
+                     	<input type="text" class="form-control input-lg" placeholder="Find a book" ng-model="bookSearch" ng-keyup="searchBooks(bookSearch)"/>
+                         <!-- <input class="btn btn-primary" type="button" ng-click="searchBooks(bookSearch)" value="Search" > -->
+                         <img src="images/loading.gif" id="loading-image" style="display:none; width:50px;" >
+                     </form>
+                     <!-- End Book Search Form -->
+                  </div>
+                  <!-- Books Listing -->
+                  <div class="add_book" ng-repeat="oneBook in booksResults">
+                     <h3>{{oneBook.volumeInfo.title}}</h3>
+                     <p>by {{oneBook.volumeInfo.authors[0]}}</p>
+                     <div class="btn btn-link" ng-hide="isBookadded(oneBook)"><a ng-click="addToLibrary(oneBook)">Add</a></div>
+                      <div class="btn" ng-show="isBookadded(oneBook)">Added</div>
+                  </div>
+                  <!-- End Books Listing -->
+               </div>
+            </div>
+            <!-- End Left Section -->
+            <!-- Main Section -->
+            <div class="col-md-8 main-section">
+               <div class="main_page">
+                  <h1>My Books</h1>
+                  <!-- Book Details -->
+                  <div class="book_detail" ng-repeat="myBook in myBooks">
+                     <div class="book_img">
+                        <img ng-src="{{ myBook.volumeInfo.imageLinks.thumbnail }}" alt="Image">
+                     </div>
+                     <div class="book_name">
+                        <h2>{{myBook.volumeInfo.title}}</h2>
+                        <h3>by {{myBook.volumeInfo.authors[0]}}</h3>
+                        <p>{{myBook.volumeInfo.description}}</p>
+                        <span>{{myBook.volumeInfo.pageCount}} pages</span>
+                     </div>
+                  </div>
+                  <!-- End Book Details -->
+               </div>
+            </div>
+            <!-- End Main Section -->
+         </div>
+      </div>
+   </div>
+</article>
+      <!-- Main jQuery -->
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Bootstrap Main JS -->
+      <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

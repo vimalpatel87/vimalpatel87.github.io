@@ -1,0 +1,264 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+/*	font-family: 'Lato', sans-serif;  */
+
+/* Import CSS */
+@import 'bootstrap.min.css';
+
+
+/* CSS Document */
+/*********************************************************************************************
+CSS, HTML and Design Files are all Copyright 2017-2018.
+And God said "Let there be code..."
+**********************************************************************************************/
+/* Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, /*table,*/ caption, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+ol, ul, li {list-style: inside;}
+ol li {list-style: inside decimal;}
+blockquote, q {quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none; }
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Text Box  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+
+input[type="text"] {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 5px 0;
+    color: #7b7b7b;
+    border: 1px solid #d4d4d4;
+    background-color: #ffffff;
+    color: #111111;
+    border-radius: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+input[type="text"]:focus {
+    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Text Box  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+
+::-moz-selection {
+    background: #000;
+    color: #fff;
+}
+/* Typography */
+.btn-link {
+	padding: 0;
+	margin: 0;
+}
+p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-stretch: normal;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+h1 {
+    font-size: 42px;
+    line-height: 42px;
+}
+h2 {
+    font-size: 32px;
+    line-height: 32px;
+    padding: 10px 0;
+}
+h3 {
+    font-size: 20px;
+    line-height: 30px;
+}
+a {
+    -webkit-transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
+    -moz-transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
+    -ms-transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
+    -o-transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
+    transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
+    text-decoration: underline;
+    color: #728293;
+}
+a:focus,
+a:hover { outline: none; }
+b,
+strong {
+    font-weight: 700;
+}
+/* Images  */
+
+img {
+    max-width: 100%;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: middle;
+    height: auto;
+}
+/* 01 - General & Basic Styles */
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    background: #f2f2f2;
+    color: #000000;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Normal CSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.main {
+    margin: 60px 0;
+}
+.left_side {
+    background: #e6e6e6;
+    padding: 30px 30px 65px;
+}
+.search-btn input {
+    font-size: 16px;
+    
+}
+.add_book {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cfcfcf;
+}
+.add_book a {
+    padding: 10px 0;
+    display: inline-block;
+}
+/**/
+
+.main_page {
+    text-align: center;
+}
+.main_page h1 {
+    margin-bottom: 60px;
+}
+.book_detail {
+    text-align: left;
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.book_detail:hover {
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+}
+.book_detail,
+.book_detail:hover {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.book_img {
+    display: inline-block;
+    width: 100px;
+    height: 150px;
+}
+.book_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.book_name {
+    display: inline-block;
+    width: 74%;
+    vertical-align: top;
+    margin-left: 30px;
+}
+.book_name p {
+    margin-top: 40px;
+}
+.book_name span {
+    display: block;
+    margin-top: 50px;
+    font-style: italic;
+}
+
+
+/* ---------- RESPONSIVE CSS ---------- */
+
+@media(max-width:1200px) {
+    .book_name {
+        width: 66%;
+    }
+}
+@media(max-width:991px) {
+    .book_name {
+        width: 73%;
+    }
+}
+@media(max-width:767px) {
+	.main-section {
+		padding-left: 0;
+		padding-right: 0;
+	}
+    .main_page h1 {
+        margin-bottom: 40px;
+    }
+    .book_name {
+        width: 70%;
+    }
+}
+@media(max-width:600px) {
+	.main {
+		margin: 40px 0;
+	}
+    .main_page h1 {
+        margin-bottom: 40px;
+		font-size: 34px;
+    }
+    .book_detail {
+        text-align: center;
+    }
+    .book_name {
+        width: 100%;
+        margin: 0;
+    }
+    .book_name h2 {
+        margin-top: 20px;
+		font-size: 28px
+    }
+    .book_name p {
+        margin-top: 20px;
+    }
+    .book_name span {
+        margin-top: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
