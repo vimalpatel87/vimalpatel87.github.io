@@ -21,6 +21,10 @@ libraryApp.controller('libraryController', function($scope){
     //Search for Books from Google API
     $scope.searchBooks = function(key) {
         $("#loading-image").show();
+        if(key == "") {
+            $scope.booksResults = [];   
+            $scope.$apply();
+         }
         var request = api_prefix + key;
         $.get(request, function(resp) {
             if(resp.items && resp.items.length > 0) {
