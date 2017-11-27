@@ -61,7 +61,11 @@
                      <div class="book_name">
                         <h2>{{myBook.volumeInfo.title}}</h2>
                         <h3>by {{myBook.volumeInfo.authors[0]}}</h3>
-                        <p>{{myBook.volumeInfo.description}}</p>
+                        <p>{{myBook.volumeInfo.description | limitTo: 200}}
+                         </p>
+                         <span ng-show="myBook.volumeInfo.description.length > 200" style="margin-top:10px;">
+                         <a ng-href="{{myBook.volumeInfo.canonicalVolumeLink}}">Read More</a>
+                            </span>
                         <span>{{myBook.volumeInfo.pageCount}} pages</span>
                      </div>
                   </div>
