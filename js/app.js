@@ -23,6 +23,7 @@ libraryApp.controller('libraryController', function($scope){
         $("#loading-image").show();
         if(key == "") {
             $scope.booksResults = [];   
+            $("#loading-image").hide();
             $scope.$apply();
          } else {
             var request = api_prefix + key;
@@ -42,6 +43,5 @@ libraryApp.controller('libraryController', function($scope){
                 $("#loading-image").hide();
             });
             }
-        
   }
 });
